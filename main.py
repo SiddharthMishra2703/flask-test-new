@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -23,5 +24,6 @@ def predict():
     return jsonify(prediction.tolist())
 
 
+PORT = os.environ.get('PORT', 3000)
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=PORT, debug=True)
