@@ -1,4 +1,4 @@
 Flask
 joblib
 xgboost
-waitresss
+waitress
